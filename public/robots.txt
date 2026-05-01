@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Specific rules for Google bot
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing bot
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of private pages (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://sjacafilm.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+Request-rate: 1/1s

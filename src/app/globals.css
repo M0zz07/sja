@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --black: #0a0a0a;
+  --black2: #111111;
+  --black3: #1a1a1a;
+  --red: #cc1a1a;
+  --red-dark: #9e1313;
+  --red-glow: rgba(204, 26, 26, 0.18);
+  --silver: #c8c8c8;
+  --silver2: #8a8a8a;
+  --white: #ffffff;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-red: rgba(204, 26, 26, 0.25);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --T: 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--silver);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 2px;
+}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+
+/* ── CUSTOM PULSE ANIMATION (Untuk Keunggulan) ── */
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(204, 26, 26, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(204, 26, 26, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(204, 26, 26, 0); }
+}
+.pulse-animation {
+  animation: pulseRing 2s 1.5s ease-out 2;
+}
