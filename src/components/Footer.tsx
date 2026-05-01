@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { siteConfig } from "@/lib/config";
 export default function Footer() {
   return (
     <footer className="bg-[var(--black2)] px-[5%] pt-[4.5rem] pb-[2rem] border-t border-[var(--border-red)]">
@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="font-extrabold text-[0.8rem] text-[var(--white)] uppercase tracking-[0.1em] mb-[1.25rem]">Kontak</div>
             <div className="flex items-start gap-[10px] text-[0.875rem] text-[var(--silver2)] mb-[0.75rem]">
               <svg viewBox="0 0 24 24" className="w-[15px] h-[15px] stroke-[var(--red)] fill-none stroke-[2] flex-shrink-0 mt-[3px]"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" /></svg>
-              <span>+62 858-9032-6818</span>
+              <span>{siteConfig.displayNumber}</span>
             </div>
             <div className="flex items-start gap-[10px] text-[0.875rem] text-[var(--silver2)] mb-[0.75rem]">
               <svg viewBox="0 0 24 24" className="w-[15px] h-[15px] stroke-[var(--red)] fill-none stroke-[2] flex-shrink-0 mt-[3px]"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
