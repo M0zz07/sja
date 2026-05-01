@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     canonical: "https://sjacafilm.com", 
   },
   verification: {
-    google: "OeCCrx0ImEvrfXntkwuGvzlxt5P5avP97GgDV6tnM58",
+    google: "google8006e8df45c48748.html",
   },
 };
 
