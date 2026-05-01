@@ -13,15 +13,28 @@ const inter = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#0a0a0a",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sjacafilm.com"),
-  title: "SJA Kaca Film – Jasa Pasang Kaca Film Profesional",
+  metadataBase: new URL("https://sjakacafilm.vercel.app"),
+  title: {
+    default: "SJA Kaca Film – Spesialis Pasang Kaca Film Jakarta",
+    template: "%s | SJA Kaca Film"
+  },
   description:
-    "SJA Kaca Film – Jasa pasang kaca film profesional untuk gedung, rumah, dan mobil. Material berkualitas, harga transparan, garansi terpercaya.",
-  keywords:
-    "kaca film, jasa pasang kaca film, kaca film mobil, kaca film rumah, kaca film gedung, SJA Kaca Film",
+    "Layanan jasa pasang kaca film panggilan profesional untuk mobil, rumah, dan gedung di Jakarta & sekitarnya. Material premium, tolak panas maksimal, garansi resmi 5 tahun.",
+  keywords: [
+    "kaca film jakarta",
+    "jasa pasang kaca film panggilan",
+    "pasang kaca film mobil terdekat",
+    "kaca film rumah",
+    "kaca film gedung",
+    "kaca film tolak panas",
+    "nano ceramic",
+    "harga kaca film mobil",
+    "SJA Kaca Film"
+  ],
   authors: [{ name: "SJA Kaca Film" }],
   creator: "SJA Kaca Film",
   publisher: "SJA Kaca Film",
@@ -35,14 +48,14 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: "https://sjacafilm.com",
     siteName: "SJA Kaca Film",
-    title: "SJA Kaca Film – Jasa Pasang Kaca Film Profesional",
+    title: "SJA Kaca Film – Spesialis Pasang Kaca Film Jakarta",
     description:
-      "Solusi kaca film profesional untuk rumah, gedung, dan kendaraan Anda. Material berkualitas, instalasi profesional, garansi 5 tahun.",
+      "Layanan jasa pasang kaca film panggilan profesional untuk mobil, rumah, dan gedung di Jakarta. Material premium, instalasi tanpa gelembung, garansi 5 tahun.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/Logo.jpeg",
+        width: 800,
+        height: 800,
         alt: "SJA Kaca Film - Jasa Pasang Kaca Film Profesional",
       },
     ],
@@ -66,10 +79,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sjacafilm.com", 
-  },
-  verification: {
-    google: "google8006e8df45c48748.html",
+    canonical: "https://sjacafilm.com",
   },
 };
 
@@ -81,16 +91,29 @@ export default function RootLayout({
   
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "AutomotiveBusiness"],
     name: "SJA Kaca Film",
-    image: "https://sjacafilm.com/Logo.jpeg",
-    description: "Jasa pasang kaca film profesional untuk gedung, rumah, dan mobil.",
-    url: "https://sjacafilm.com",
+    image: "https://sjakacafilm.vercel.app/Logo.jpeg",
+    description: "Jasa spesialis pemasangan kaca film profesional untuk mobil, rumah, dan gedung komersial dengan layanan panggilan (home service).",
+    url: "https://sjakacafilm.vercel.app",
     telephone: `+${siteConfig.whatsappNumber}`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jakarta",
+      addressRegion: "DKI Jakarta",
       addressCountry: "ID",
+    },
+    areaServed: [
+      { "@type": "City", name: "Jakarta" },
+      { "@type": "City", name: "Bogor" },
+      { "@type": "City", name: "Depok" },
+      { "@type": "City", name: "Tangerang" },
+      { "@type": "City", name: "Bekasi" }
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "150"
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -98,7 +121,10 @@ export default function RootLayout({
       opens: "07:00",
       closes: "22:00",
     },
-    priceRange: "$$",
+    sameAs: [
+      "https://www.instagram.com/sjakacafilm?igsh=MWpkNHhxZ2k1dGU4ZA==",
+      `https://wa.me/${siteConfig.whatsappNumber}`
+    ]
   };
 
   return (
