@@ -57,10 +57,15 @@ export const metadata: Metadata = {
     telephone: false,
     address: false,
   },
+  icons: {
+    icon: "/Logo.jpeg",
+    shortcut: "/Logo.jpeg",
+    apple: "/Logo.jpeg",
+  },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://sjacafilm.com",
+    url: "https://sjakacafilm.vercel.app",
     siteName: "SJA Kaca Film",
     title: "SJA Kaca Film – Spesialis Pasang Kaca Film Jakarta",
     description:
@@ -93,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sjacafilm.com",
+    canonical: "https://sjakacafilm.vercel.app",
   },
 };
 
@@ -135,6 +140,7 @@ export default function RootLayout({
       opens: "07:00",
       closes: "22:00",
     },
+    priceRange: "$$",
     sameAs: [
       "https://www.instagram.com/sjakacafilm?igsh=MWpkNHhxZ2k1dGU4ZA==",
       `https://wa.me/${siteConfig.whatsappNumber}`
