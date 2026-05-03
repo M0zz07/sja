@@ -58,7 +58,7 @@ export default function Footer() {
             </div>
             <div className="flex items-start gap-[10px] text-[0.875rem] text-[var(--silver2)] mb-[0.75rem]">
               <svg viewBox="0 0 24 24" className="w-[15px] h-[15px] stroke-[var(--red)] fill-none stroke-[2] flex-shrink-0 mt-[3px]"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              <span>Senin – Minggu, 07.00 – 22.00 WIB</span>
+              <span>Senin – Minggu, 07.00 – 18.00 WIB</span>
             </div>
           </div>
           
